@@ -28,28 +28,6 @@ suite('E2E', async () => {
             await ocpWebConsole.waitCreateCheClusterYaml();
         });
 
-        test('Open editor replace widget in the Che Cluster yaml', async () => {
-            await ocpWebConsole.openEditorReplaceWidget();
-        });
-
-        test('Set value of OpenShiftOauth property', async () => {
-            const propertyName = 'openShiftoAuth';
-            const propertyDefaultValue = 'true';
-            await ocpWebConsole.setValuePropertyInCheClusterYaml(propertyName, propertyDefaultValue, TestConstants.TS_SELENIUM_VALUE_OPENSHIFT_OAUTH);
-        });
-
-        test('Set value of TlsSupport property', async () => {
-            const propertyName = 'tlsSupport';
-            const propertyDefaultValue = 'false';
-            await ocpWebConsole.setValuePropertyInCheClusterYaml(propertyName, propertyDefaultValue, TestConstants.TS_SELENIUM_VALUE_TLS_SUPPORT);
-        });
-
-        test('Set value of SelfSignedCert property', async () => {
-            const propertyName = 'selfSignedCert';
-            const propertyDefaultValue = 'false';
-            await ocpWebConsole.setValuePropertyInCheClusterYaml(propertyName, propertyDefaultValue, TestConstants.TS_SELENIUM_VALUE_SELF_SIGN_CERT);
-        });
-
         test('Create Che Cluster ', async () => {
             await ocpWebConsole.clickOnCreateCheClusterButton();
             await ocpWebConsole.waitResourcesCheClusterTitle();
