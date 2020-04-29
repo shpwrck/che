@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
       - name: skopeo
-        image: quay.io/eclipse/che-docker-registry-image-copier:alpine-ce30798
+        image: quay.io/eclipse/che-docker-registry-image-copier:alpine-d82355c
         imagePullPolicy: IfNotPresent
         env:
           - name: DOCKER_IMAGES
